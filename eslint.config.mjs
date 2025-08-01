@@ -1,15 +1,15 @@
-import { dirname } from "path"
-import { fileURLToPath } from "url"
+import { dirname } from "path";
+import { fileURLToPath } from "url";
 
-import { FlatCompat } from "@eslint/eslintrc"
-import readableTailwind from "eslint-plugin-readable-tailwind"
+import { FlatCompat } from "@eslint/eslintrc";
+import betterTailwindcss from "eslint-plugin-better-tailwindcss";
 
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = dirname(__filename)
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 const compat = new FlatCompat({
     baseDirectory: __dirname,
-})
+});
 
 const eslintConfig = [
     {
@@ -59,7 +59,7 @@ const eslintConfig = [
     },
     {
         plugins: {
-            "readable-tailwind": readableTailwind,
+            "better-tailwindcss": betterTailwindcss,
         },
     },
     {
@@ -68,6 +68,6 @@ const eslintConfig = [
             "no-undef": "off",
         },
     },
-]
+];
 
-export default eslintConfig
+export default eslintConfig;
