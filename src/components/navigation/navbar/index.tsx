@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import Theme from "@/components/navigation/navbar/Theme";
+
 export default function NavBar() {
     return (
         <nav className="flex-between background-light900_dark200 fixed z-50 w-full p-6 dark:shadow-none sm:px-12 shadow-light-300 gap-5">
@@ -19,7 +21,7 @@ export default function NavBar() {
 
             <p>Global Search</p>
 
-            <div className="flex-between gap-5">Theme</div>
+            <Theme />
         </nav>
     );
 }
